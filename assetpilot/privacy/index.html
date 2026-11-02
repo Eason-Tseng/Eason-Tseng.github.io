@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AssetPilot 隱私權政策｜ESN Labs</title>
+  <meta name="description" content="AssetPilot 資產配置 App 的隱私權政策：資料只存在你的裝置，伺服器只提供行情，不保存使用者資料。">
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; color: #1f2933; background: #f6f8fb; }
+    body { margin: 0; line-height: 1.75; }
+    main { max-width: 760px; margin: 0 auto; padding: 36px 20px 64px; }
+    h1 { color: #2b5c8a; }
+    h2 { margin-top: 28px; }
+    .meta, .notice { padding: 12px 16px; border-radius: 10px; }
+    .meta { background: #e3ebf3; }
+    .notice { background: #eef5ec; border: 1px solid #b9d3b2; }
+    table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+    th, td { border: 1px solid #d5dde6; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #eef2f7; }
+    a { color: #2b5c8a; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../">← 回到 AssetPilot 專頁</a>　｜　<a href="./en/">English</a></p>
+    <h1>AssetPilot 隱私權政策</h1>
+    <p class="meta"><strong>生效日期：</strong>2026 年 11 月 2 日</p>
+    <p>AssetPilot（商店名稱「AssetPilot 資產配置」）是記錄與檢視個人資產配置的 App。本政策說明 App 與我們的伺服器如何處理資料。</p>
+    <p class="notice"><strong>重點：</strong>你的資產資料只存在你的裝置。AssetPilot 沒有帳號與登入，不追蹤你，不放廣告；我們的伺服器只提供行情（股價、加密貨幣價格、匯率），不保存任何使用者資料。</p>
+
+    <h2>開發者與聯絡方式</h2>
+    <p><strong>開發者：</strong>ESN Labs（Eason-Tseng）</p>
+    <p><strong>隱私聯絡 Email：</strong><a href="mailto:g9008933@gmail.com">g9008933@gmail.com</a></p>
+
+    <h2>1. 存在你裝置上的資料</h2>
+    <p>你輸入的帳戶、資產項目、數量、價格、自訂資產包、圖表、配比策略與每日快照，只存在你裝置上的資料庫，不會上傳到我們的伺服器或任何雲端。刪除 App 就會刪除這些資料（請先匯出備份）。</p>
+
+    <h2>2. 與我們的伺服器之間傳送的資料</h2>
+    <p>伺服器只用來提供行情，App 不會送出你的資產數量、金額、名稱或帳戶。</p>
+    <table>
+      <tr><th>情境</th><th>App 送出的內容</th><th>伺服器保存的內容</th></tr>
+      <tr><td>取得報價表與標的清單</td><td>存取權杖（只代表「這是正版 App」，不含任何使用者資料）</td><td>不保存。限流計數只保存權杖編號經單向雜湊後的值，最長 2 天內清除</td></tr>
+      <tr><td>冷門加密貨幣的報價（市值前 500 名以外）</td><td>你持有的冷門幣種的 CoinMarketCap 編號（不含數量或金額）</td><td>只保存幣種編號與最後被要求的時間，不與裝置或權杖關聯；30 天沒被要求即刪除</td></tr>
+      <tr><td>正版驗證（約每週一次）</td><td>iPhone：Apple App Attest 產生的驗證資料；Android：Google Play Integrity 的完整性權杖</td><td>不保存。只用來確認是從官方商店安裝的正版 App</td></tr>
+    </table>
+    <p><strong>IP 位址：</strong>任何網路連線都會讓伺服器看到你的 IP 位址。我們只把 IP 經單向雜湊後用於限流（防止濫用），最長 2 天內清除；主機服務商（Supabase）可能依其政策短期保存一般存取紀錄。</p>
+    <p><strong>正版驗證的第三方：</strong>Android 的 Play Integrity 由 Google 處理裝置與 App 的完整性資訊；iPhone 的 App Attest 由 Apple 處理。詳見 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>與 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>。</p>
+
+    <h2>3. 當機回報（選用，預設關閉）</h2>
+    <p>你可以在「設定」中自行開啟匿名當機回報，協助我們修正問題；預設為關閉，關閉時不會送出任何回報。開啟後，App 當機時會透過 Sentry（Functional Software, Inc.）送出：當機位置（程式堆疊）、App 版本、裝置型號與系統版本。送出前會移除金額、名稱、帳戶、代碼、檔案路徑中的使用者名稱與畫面輸入；不保存 IP 位址；不與你的身分連結，也不用於追蹤。你可以隨時在設定中關閉。</p>
+
+    <h2>4. 匯出檔</h2>
+    <p>「匯出完整資料」產生的檔案包含你在 App 中的全部資料，由你自行選擇存放位置（例如「檔案」App、雲端硬碟或寄給自己）並自行保管。匯出檔沒有加密，請存放在安全的地方。</p>
+
+    <h2>5. 權限</h2>
+    <ul>
+      <li><strong>網路：</strong>取得行情與正版驗證。</li>
+      <li><strong>Face ID／Touch ID／指紋（選用）：</strong>只在你開啟「App 鎖定」時使用，由系統驗證，App 拿不到你的生物特徵資料。</li>
+    </ul>
+    <p>App 不要求位置、相機、麥克風、聯絡人、相片或通知權限。</p>
+
+    <h2>6. 沒有帳號、追蹤與廣告</h2>
+    <p>AssetPilot 不提供帳號或登入，不使用廣告、分析或追蹤工具，不使用廣告識別碼，不出售或分享你的資料。</p>
+
+    <h2>7. 不是投資建議</h2>
+    <p>AssetPilot 只記錄與檢視資產，不轉帳、不下單，也不提供投資建議。</p>
+
+    <h2>8. 兒童</h2>
+    <p>本 App 不是為 13 歲以下兒童設計，我們不會刻意收集兒童的資料。</p>
+
+    <h2>9. 資料刪除與隱私請求</h2>
+    <p>你的資料只在你的裝置上：在 App 中刪除項目或刪除 App 即可刪除。伺服器沒有可對應到你的資料，因此沒有需要另外申請刪除的帳戶資料。若有任何隱私問題，請來信上方的 Email。</p>
+
+    <h2>10. 政策變更</h2>
+    <p>資料處理方式有重大變更時，我們會更新本頁的內容與生效日期。</p>
+  </main>
+</body>
+</html>
